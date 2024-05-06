@@ -4,7 +4,7 @@ This is the repository for my personal portfolio website. The website showcases 
 
 ## Getting Started
 
-To view the website, simply click on the link to my deployed site: [https://mistercxmpy.github.io/cosgun-hussein/](https://mistercxmpy.github.io/cosgun-hussein/)
+To view the website, simply click on the link to my deployed site: [https://dkgamer.fun/](https://dkgamer.fun/)
 
 ## Technologies Used
 
