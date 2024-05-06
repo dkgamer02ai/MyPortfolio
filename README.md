@@ -1,4 +1,4 @@
-# Cosgun Hussein Portfolio
+# Arin-Prashar's  Portfolio
 
 This is the repository for my personal portfolio website. The website showcases my skills and projects as a software engineer.
 
