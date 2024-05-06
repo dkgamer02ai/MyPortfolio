@@ -1,11 +1,10 @@
 /* CSS */
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-b
-ody {
+body {
   margin: 0;
   padding: 15px 25px;
   min-height: 99%;
-  font-family: cursor, monospace;
+  font-family: 'Fira Code', monospace;
   overflow-x: hidden;
 }
 
