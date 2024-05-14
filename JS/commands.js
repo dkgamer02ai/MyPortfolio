@@ -41,7 +41,6 @@ projects = [
   "Type the name of the language to views its projects:",
   "<br>",
   '<span class="command">Python</span>',
-  python,
   '<span class="command"></span>',
   "<br>",
 ];
