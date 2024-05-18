@@ -6,13 +6,9 @@ ls=[
 ];
 whoami = [
   "<br>",
-  "Hello, I'm Arin Prashar(aka DKGamer02AI), a System Administrator,Pentester and Vulnerability Analyst",
-  "and ardent Open Source Enthusiast hailing from the vibrant landscape of Himachal Pradesh,India.",
-  "With my insatiable curiosity and unwavering passion for cybersecurity and public security, I love to explore",
-  "and unravel its mysteries. I am confident in my abilities and bring a wealth of knowledge, skills ",
-  "and expertise to every project I work on.",
-  "I am proficient in multiple programming languages and keep myself updated using CVE database and more such databases.",
-  "I am also an unofficial member of the Cyber Security Club of my college and have participated in various CTFs and Hackathons.",
+  `<p>Hello, I'm Arin Prashar(aka DKGamer02AI), a System Administrator,Pentester and Vulnerability Analyst and ardent Open Source Enthusiast hailing from the vibrant landscape of Himachal Pradesh,India.`,
+  `With my insatiable curiosity and unwavering passion for cybersecurity and public security, I love to explore and unravel its mysteries. I am confident in my abilities and bring a wealth of knowledge, skills and expertise to every project I work on.`,
+  `I am proficient in multiple programming languages and keep myself updated using CVE database and more such databases. I am also an unofficial member of the Cyber Security Club of my college and participated in various CTFs and Hackathons.</p>`,
   "<br>",
 ];
 
@@ -39,9 +35,8 @@ projects = [
   "All projects are visable on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub",
   "<br>",
   "Type the name of the language to views its projects:",
-  "<br>",
-  '<span class="command">Python</span>',
-  '<span class="command"></span>',
+  '<span class="command"> => Python</span>',
+  '<span class="command"> => Server</span>',
   "<br>",
 ];
 
@@ -53,6 +48,7 @@ help = [
   '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           Display list of commands',
   '<span class="command">clear</span>          Clear terminal',
+  'and some other hidden commands',
   "<br>",
 ];
 
@@ -96,10 +92,29 @@ python = [
   "<br>",
   '<a href="https://github.com/arin-prashar/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
   '<a href="https://github.com/arin-prashar/qr-generator" target="_blank">    => QR Generator' + "</a>",
-  '<a href="https://github.com/MisterCxmpy/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
+  '<a href="https://github.com/arin-prashar/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
   "<br>",
 ];
 
+server = [
+  "<br>",
+  "Server projects :<br>",
+  "<br>",
+  "# Setup a private home server using a old PC",
+  "   -> Used Proxmox for virtualization",
+  "   -> Used Docker for containerization",
+  "   -> Used True NAS for storage",
+  "   -> Used OpenVPN for remote access",
+  "<br>",
+];
+
+
+const cv=[
+  "<br>",
+  "⚠ CV SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
+  "For now, you can view my CV on my <a href='' target='_blank'>CV</a>",
+  "<br>",
+]
 
 const project = (name, website, client, server, merge) => {
   const links = [];

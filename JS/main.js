@@ -93,6 +93,9 @@ function commander(cmd) {
     case "python":
       loopLines(python, "color2 margin", 80);
     break;
+    case "server":
+      loopLines(server, "color2 margin", 80);
+    break;
 
     default:
       addLine("<span class=\"inherit\">shell: command not found: ".concat(cmd,". Try <span class=\"command\">'help'</span> to get started.</span> "), "error", 100);
