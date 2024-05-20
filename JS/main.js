@@ -1,14 +1,12 @@
-const title = document.querySelector("#title");
-const container = document.querySelector(".container");
-let before = document.querySelector("#before");
-const liner = document.querySelector("#liner");
-const command = document.querySelector("#typer"); 
-const textarea = document.querySelector("#texter"); 
-const terminal = document.querySelector("#terminal");
-const theme = localStorage.getItem("themes");
-
 var git = 0;
 var commands = [];
+
+var container = document.querySelector(".container");
+var before = document.querySelector("#before");
+var liner = document.querySelector("#liner");
+var command = document.querySelector("#typer"); 
+const textarea = document.querySelector("#texter"); 
+var terminal = document.querySelector("#terminal");
 
 setTimeout(function() {
   loopLines(banner, "", 80);
@@ -17,26 +15,20 @@ setTimeout(function() {
 
 window.addEventListener("keyup", enterKey);
 
-if (theme != null){
-  document.getElementById("currentTheme").setAttribute("href", theme);
-};
 
 textarea.value = "";
 command.innerHTML = textarea.value;
 
 function enterKey(e) {
-  if (e.keyCode == 181) {
-    document.location.reload(true);
-  }
-  
   if (e.keyCode == 13) {
     commands.push(command.innerHTML);
     git = commands.length;
-    addLine("guest@53ur!tyd3m0n:~$ " + command.innerHTML, "no-animation", 0);
+    addLine("guest@DK-da3m0n:~$ " + command.innerHTML, "var(--main-color)   font-family: \"Fira Code\",monospace; font-size: 16px; no-animation", 0);
     commander(command.innerHTML.toLowerCase());
     command.innerHTML = "";
-    textarea.value = "";
+    // textarea.value = "";
   }
+
   if (e.keyCode == 38 && git != 0) {
     git -= 1;
     textarea.value = commands[git];
@@ -98,7 +90,7 @@ function commander(cmd) {
     break;
 
     default:
-      addLine("<span class=\"inherit\">shell: command not found: ".concat(cmd,". Try <span class=\"command\">'help'</span> to get started.</span> "), "error", 100);
+      addLine("<span class=\"inherit\">shell: command not found: ".concat(cmd,"Try <span class=\"command\">'help'</span> to get started.</span> "), "error", 100);
       break;
   }
 }

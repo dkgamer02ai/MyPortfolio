@@ -6,9 +6,9 @@ ls=[
 ];
 whoami = [
   "<br>",
-  `<p>Hello, I'm Arin Prashar(aka DKGamer02AI), a System Administrator,Pentester and Vulnerability Analyst and ardent Open Source Enthusiast hailing from the vibrant landscape of Himachal Pradesh,India.`,
-  `With my insatiable curiosity and unwavering passion for cybersecurity and public security, I love to explore and unravel its mysteries. I am confident in my abilities and bring a wealth of knowledge, skills and expertise to every project I work on.`,
-  `I am proficient in multiple programming languages and keep myself updated using CVE database and more such databases. I am also an unofficial member of the Cyber Security Club of my college and participated in various CTFs and Hackathons.</p>`,
+  `<p class="about">Hello, I'm Arin Prashar(aka DKGamer02AI), a System Administrator,Pentester and Vulnerability Analyst and ardent Open Source Enthusiast hailing from the vibrant landscape of Himachal Pradesh,India.</p>`,
+  `<p class="about">With my insatiable curiosity and unwavering passion for cybersecurity and public security, I love to explore and unravel its mysteries. I am confident in my abilities and bring a wealth of knowledge, skills and expertise to every project I work on.</p>`,
+  `<p class="about">I am proficient in multiple programming languages and keep myself updated using CVE database and more such databases. I am also an unofficial member of the Cyber Security Club of my college and participated in various CTFs and Hackathons.</p>`,
   "<br>",
 ];
 
@@ -35,7 +35,8 @@ projects = [
   "All projects are visable on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub",
   "<br>",
   "Type the name of the language to views its projects:",
-  '<span class="command"> => Python</span>',
+  '<span class="command" style="cursor:pointer;" id="comnd"> => Python</span>',
+  '<span class="command"> => Rust</span>',
   '<span class="command"> => Server</span>',
   "<br>",
 ];
@@ -122,20 +123,15 @@ const project = (name, website, client, server, merge) => {
   if (website) {
     links.push(`<span class="command">[</span><a href="${website}" target="_blank">Live</a><span class="command">]</span>`);
   }
-
   if (client) {
     links.push(`<span class="command">[</span><a href="${client}" target="_blank">Client Repo</a><span class="command">]</span>`);
   }
-
   if (server) {
     links.push(`<span class="command">[</span><a href="${server}" target="_blank">Server Repo</a><span class="command">]</span>`);
   }
-
   if (merge) {
     links.push(`<span class="command">[</span><a href="${merge}" target="_blank">Client & Server Repo</a><span class="command">]</span>`);
   }
-
   const project_final = `<span class="command">${name}    </span>${links.join(' ')}`;
-
   return project_final;
 }
