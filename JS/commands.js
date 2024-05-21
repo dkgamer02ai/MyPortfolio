@@ -32,12 +32,12 @@ social = [
 projects = [
   "<br>",
   "⚠ PROJECT SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
-  "All projects are visable on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub",
+  "All projects are visable on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub</a>",
   "<br>",
   "Type the name of the language to views its projects:",
   '<span class="command" style="cursor:pointer;" id="comnd"> => Python</span>',
-  '<span class="command"> => Rust</span>',
-  '<span class="command"> => Server</span>',
+  '<span class="command" style="cursor:pointer;" id="comnd"> => Rust</span>',
+  '<span class="command" style="cursor:pointer;" id="comnd"> => Server</span>',
   "<br>",
 ];
 
@@ -52,6 +52,55 @@ help = [
   'and some other hidden commands',
   "<br>",
 ];
+
+python = [
+  "<br>",
+  "Python projects :<br>",
+  "<br>",
+  '<a href="https://github.com/arin-prashar/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
+  '<a href="https://github.com/arin-prashar/qr-generator" target="_blank">    => QR Generator' + "</a>",
+  '<a href="https://github.com/arin-prashar/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
+  "<br>",
+];
+
+server = [
+  "<br>",
+  "Server projects :<br>",
+  "<br>",
+  "# Setup a private home server using a old PC",
+  "   -> Used Proxmox for virtualization",
+  "   -> Used Docker for containerization",
+  "   -> Used True NAS for storage",
+  "   -> Used OpenVPN for remote access",
+  "<br>",
+];
+
+
+const cv=[
+  "<br>",
+  "⚠ CV SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
+  `For now, you can view my CV here -> <a onclick="window.open('https://drive.google.com/file/d/126RTNyGdSOiwBp7QmvCDSgpYE2QB6efv/view?usp=sharing','newwindow','width=800,height=1200'); return false" target="_blank">CV</a>`,
+  "<br>",
+]
+
+const project = (name, website, client, server, merge) => {
+  const links = [];
+
+  if (website) {
+    links.push(`<span class="command">[</span><a href="${website}" target="_blank">Live</a><span class="command">]</span>`);
+  }
+  if (client) {
+    links.push(`<span class="command">[</span><a href="${client}" target="_blank">Client Repo</a><span class="command">]</span>`);
+  }
+  if (server) {
+    links.push(`<span class="command">[</span><a href="${server}" target="_blank">Server Repo</a><span class="command">]</span>`);
+  }
+  if (merge) {
+    links.push(`<span class="command">[</span><a href="${merge}" target="_blank">Client & Server Repo</a><span class="command">]</span>`);
+  }
+  const project_final = `<span class="command">${name}    </span>${links.join(' ')}`;
+  return project_final;
+}
 
 const generateSessionID = () => {
   const hexChars = "0123456789abcdef";
@@ -86,52 +135,3 @@ banner = [
   `<span class="color2">Type</span> <span class="command">'help'</span><span class="color2"> to see list of available commands.</span>`,
   `<span class="color2">All Commands are case insensitive.</span>`,
 ];
-
-python = [
-  "<br>",
-  "Python projects :<br>",
-  "<br>",
-  '<a href="https://github.com/arin-prashar/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
-  '<a href="https://github.com/arin-prashar/qr-generator" target="_blank">    => QR Generator' + "</a>",
-  '<a href="https://github.com/arin-prashar/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
-  "<br>",
-];
-
-server = [
-  "<br>",
-  "Server projects :<br>",
-  "<br>",
-  "# Setup a private home server using a old PC",
-  "   -> Used Proxmox for virtualization",
-  "   -> Used Docker for containerization",
-  "   -> Used True NAS for storage",
-  "   -> Used OpenVPN for remote access",
-  "<br>",
-];
-
-
-const cv=[
-  "<br>",
-  "⚠ CV SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
-  "For now, you can view my CV on my <a href='' target='_blank'>CV</a>",
-  "<br>",
-]
-
-const project = (name, website, client, server, merge) => {
-  const links = [];
-
-  if (website) {
-    links.push(`<span class="command">[</span><a href="${website}" target="_blank">Live</a><span class="command">]</span>`);
-  }
-  if (client) {
-    links.push(`<span class="command">[</span><a href="${client}" target="_blank">Client Repo</a><span class="command">]</span>`);
-  }
-  if (server) {
-    links.push(`<span class="command">[</span><a href="${server}" target="_blank">Server Repo</a><span class="command">]</span>`);
-  }
-  if (merge) {
-    links.push(`<span class="command">[</span><a href="${merge}" target="_blank">Client & Server Repo</a><span class="command">]</span>`);
-  }
-  const project_final = `<span class="command">${name}    </span>${links.join(' ')}`;
-  return project_final;
-}

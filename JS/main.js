@@ -23,10 +23,10 @@ function enterKey(e) {
   if (e.keyCode == 13) {
     commands.push(command.innerHTML);
     git = commands.length;
-    addLine("guest@DK-da3m0n:~$ " + command.innerHTML, "var(--main-color)   font-family: \"Fira Code\",monospace; font-size: 16px; no-animation", 0);
+    addLine("guest@DK-da3m0n:~$ " + command.innerHTML, "color1 no-animation", 0);
     commander(command.innerHTML.toLowerCase());
     command.innerHTML = "";
-    // textarea.value = "";
+    textarea.value = "";
   }
 
   if (e.keyCode == 38 && git != 0) {
@@ -46,53 +46,41 @@ function enterKey(e) {
 }
 
 function commander(cmd) {
-  switch (cmd.toLowerCase()) {
-    case "help":
-      loopLines(help, "color2 margin", 80);
-      break;
-    case "about":
-      loopLines(whoami, "color2 margin", 80);
-      break;
-    case "social":
-      loopLines(social, "color2 margin", 80);
-      break;
-    case "projects":
-      loopLines(projects, "color2 margin", 80);
-      break;
-    case "history":
-      addLine("<br>", "", 0);
-      loopLines(commands, "color2", 80);
-      addLine("<br>", "command", 80 * commands.length + 50);
-      break;
-    case "clear":
-      setTimeout(function() {
-        terminal.innerHTML = '<a id="before"></a>';
-        before = document.getElementById("before");
-      }, 1);
-      break;
-    case "cv":
-      loopLines(cv, "color2 margin", 80);
-      break;
-    case "ls":
-      loopLines(ls, "color2 margin", 80);
-      break;
-    // socials
-    case "github":
-      addLine("Opening GitHub...", "color2", 0);
-      newTab(github);
-      break;
-    // languages
-    case "python":
-      loopLines(python, "color2 margin", 80);
-    break;
-    case "server":
-      loopLines(server, "color2 margin", 80);
-    break;
+  const commandMap = {
+  help: () => loopLines(help, "color2 margin", 80),
+  about: () => loopLines(whoami, "color2 margin", 80),
+  social: () => loopLines(social, "color2 margin", 80),
+  projects: () => loopLines(projects, "color2 margin", 80),
+  history: () => {
+    addLine("<br>", "", 0);
+    loopLines(commands, "color2", 80);
+    addLine("<br>", "command", 80 * commands.length + 50);
+  },
+  clear: () => {
+    setTimeout(function() {
+      terminal.innerHTML = '<a id="before"></a>';
+      before = document.getElementById("before");
+    }, 1);
+  },
+  cv: () => loopLines(cv, "color2 margin", 80),
+  ls: () => loopLines(ls, "color2 margin", 80),
+  // cd: () => loopLines(cd, "color2 margin", 80),
+  github: () => {
+    addLine("Opening GitHub...", "color2", 0);
+    newTab(github);
+  },
+  python: () => loopLines(python, "color2 margin", 80),
+  server: () => loopLines(server, "color2 margin", 80),
+};
 
-    default:
-      addLine("<span class=\"inherit\">shell: command not found: ".concat(cmd,"Try <span class=\"command\">'help'</span> to get started.</span> "), "error", 100);
-      break;
-  }
+const command = cmd.toLowerCase();
+
+if (commandMap.hasOwnProperty(command)) {
+  commandMap[command]();
+} else {
+  addLine("<span class=\"inherit\">shell: command not found: ".concat(cmd,"  Try <span class=\"command\">'help'</span> to get started.</span> "), "error", 100);
+}
+textarea.value = "";
 }
 
 function newTab(link) {
@@ -126,17 +114,6 @@ function loopLines(name, style, time) {
   name.forEach(function(item, index) {
     addLine(item, style, index * time);
   });
-}
-
-function changeStyle(sheet) {
-    document.getElementById("currentTheme").setAttribute("href", "Themes/" + sheet + ".css");  
-    textarea.focus();
-
-    if (typeof(Storage) !== "undefined") {
-      localStorage.setItem("themes", document.getElementById("currentTheme").getAttribute("href"));
-    }
-
-    return false
 }
 
 window.addEventListener("keydown", function(e) {
