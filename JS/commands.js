@@ -36,7 +36,6 @@ projects = [
   "<br>",
   "Type the name of the language to views its projects:",
   '<span class="command" style="cursor:pointer;" id="comnd"> => Python</span>',
-  '<span class="command" style="cursor:pointer;" id="comnd"> => Rust</span>',
   '<span class="command" style="cursor:pointer;" id="comnd"> => Server</span>',
   "<br>",
 ];
@@ -82,25 +81,6 @@ const cv=[
   `For now, you can view my CV here -> <a onclick="window.open('https://drive.google.com/file/d/126RTNyGdSOiwBp7QmvCDSgpYE2QB6efv/view?usp=sharing','newwindow','width=800,height=1200'); return false" target="_blank">CV</a>`,
   "<br>",
 ]
-
-const project = (name, website, client, server, merge) => {
-  const links = [];
-
-  if (website) {
-    links.push(`<span class="command">[</span><a href="${website}" target="_blank">Live</a><span class="command">]</span>`);
-  }
-  if (client) {
-    links.push(`<span class="command">[</span><a href="${client}" target="_blank">Client Repo</a><span class="command">]</span>`);
-  }
-  if (server) {
-    links.push(`<span class="command">[</span><a href="${server}" target="_blank">Server Repo</a><span class="command">]</span>`);
-  }
-  if (merge) {
-    links.push(`<span class="command">[</span><a href="${merge}" target="_blank">Client & Server Repo</a><span class="command">]</span>`);
-  }
-  const project_final = `<span class="command">${name}    </span>${links.join(' ')}`;
-  return project_final;
-}
 
 const generateSessionID = () => {
   const hexChars = "0123456789abcdef";
