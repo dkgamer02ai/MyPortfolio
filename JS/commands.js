@@ -20,7 +20,7 @@ social = [
     "</a>",
   'linkedin       <a class="social" href="' +
     linkedIn +
-    '" target="_blank">linkedIn.com/prashararin' +
+    '" target="_blank">linkedIn.com/prashar-arin' +
     "</a>",
   'email          <a class="social" href="mailto:prashararin@gmail.com" target="_blank">email/arin-prashar' +
     "</a>",
