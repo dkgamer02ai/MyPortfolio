@@ -1,5 +1,5 @@
 let github = "https://github.com/arin-prashar";
-let linkedIn = "https://www.linkedin.com/in/prashararin";
+let linkedIn = "https://www.linkedin.com/in/prashar-arin";
 
 ls=[
   "About   Socials   Projects   History   Help<br>",
