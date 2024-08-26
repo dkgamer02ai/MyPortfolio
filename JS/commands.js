@@ -78,7 +78,7 @@ server = [
 const cv=[
   "<br>",
   "⚠ CV SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
-  `For now, you can view my CV here -> <a onclick="window.open('https://drive.google.com/file/d/126RTNyGdSOiwBp7QmvCDSgpYE2QB6efv/view?usp=sharing','newwindow','width=800,height=1200'); return false" target="_blank">CV</a>`,
+  `For now, you can view my CV here -> <a onclick="window.open('https://drive.google.com/file/d/1QvGlVYQlAjvc7yJxzp52qVCcPohQ6n1i/view?usp=drive_link','newwindow','width=800,height=1200'); return false" target="_blank">CV</a>`,
   "<br>",
 ]
 
