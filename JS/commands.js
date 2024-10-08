@@ -45,6 +45,7 @@ help = [
   '<span class="command">about</span>          Who am I?',
   '<span class="command">social</span>         Display social networks',
   '<span class="command">projects</span>       View coding projects',
+  '<spam class="command">CV<\span>             Display the CV',       
   '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           Display list of commands',
   '<span class="command">clear</span>          Clear terminal',
