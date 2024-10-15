@@ -1,5 +1,6 @@
 let github = "https://github.com/arin-prashar";
 let linkedIn = "https://www.linkedin.com/in/prashar-arin";
+let htb = "https://app.hackthebox.com/profile/1304249";
 
 ls=[
   "About   Socials   Projects   History   Help<br>",
@@ -14,25 +15,18 @@ whoami = [
 
 social = [
   "<br>",
-  'github         <a class="social" href="' +
-    github +
-    '" target="_blank">github/arin-prashar' +
-    "</a>",
-  'linkedin       <a class="social" href="' +
-    linkedIn +
-    '" target="_blank">linkedIn.com/prashar-arin' +
-    "</a>",
-  'email          <a class="social" href="mailto:prashararin@gmail.com" target="_blank">email/arin-prashar' +
-    "</a>",
-  'discord        <a class="social" href="https://discordapp.com/users/695641378352267375" target="_blank">discord/DKGamer02AI' +
-    "</a>",
+  'github         <a class="social" href="' +github +'" target="_blank">github/arin-prashar' +"</a>",
+  'linkedin       <a class="social" href="' +linkedIn +'" target="_blank">linkedin.com/prashar-arin' +"</a>",
+  'HackTheBox     <a class="social" href="'+htb+'"target="_blank">hackthebox/arinprashar'+"</a>",
+  'email          <a class="social" href="mailto:prashararin@gmail.com" target="_blank">email/arin-prashar' +"</a>",
+  'discord        <a class="social" href="https://discordapp.com/users/695641378352267375" target="_blank">discord/DKGamer02AI' +"</a>",
   "<br>",
 ];
 
 projects = [
   "<br>",
   "⚠ PROJECT SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
-  "All projects are visable on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub</a>",
+  "All projects are visible on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub</a>",
   "<br>",
   "Type the name of the language to views its projects:",
   '<span class="command" style="cursor:pointer;" id="comnd"> => Python</span>',
@@ -58,7 +52,7 @@ python = [
   "Python projects :<br>",
   "<br>",
   '<a href="https://github.com/arin-prashar/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
-  '<a href="https://github.com/arin-prashar/qr-generator" target="_blank">    => QR Generator' + "</a>",
+  '<a href="https://github.com/arin-prashar/Secure-File-Transfer-System" target="_blank">    => Secure File Sharing System' + "</a>",
   '<a href="https://github.com/arin-prashar/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
   "<br>",
 ];
@@ -111,7 +105,7 @@ const generateSessionID = () => {
 };
 
 banner = [
-  '<span class="color2">Welcome to CosShell v2002.09.</span>',
+  '<span class="color2">Welcome to Unix-Shell v2002.09.</span>',
   `<span class="color2">Session ID: <span class="command">${generateSessionID()}</span></span>`,
   `<span class="color2">Type</span> <span class="command">'help'</span><span class="color2"> to see list of available commands.</span>`,
   `<span class="color2">All Commands are case insensitive.</span>`,
