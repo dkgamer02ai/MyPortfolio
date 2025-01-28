@@ -1,4 +1,4 @@
-let github = "https://github.com/arin-prashar";
+let github = "https://github.com/dkgamer02ai";
 let linkedIn = "https://www.linkedin.com/in/prashar-arin";
 let htb = "https://app.hackthebox.com/profile/1304249";
 
@@ -15,7 +15,7 @@ whoami = [
 
 social = [
   "<br>",
-  'github         <a class="social" href="' +github +'" target="_blank">github/arin-prashar' +"</a>",
+  'github         <a class="social" href="' +github +'" target="_blank">github/dkgamer02ai' +"</a>",
   'linkedin       <a class="social" href="' +linkedIn +'" target="_blank">linkedin.com/prashar-arin' +"</a>",
   'HackTheBox     <a class="social" href="'+htb+'"target="_blank">hackthebox/arinprashar'+"</a>",
   'email          <a class="social" href="mailto:prashararin@gmail.com" target="_blank">email/arin-prashar' +"</a>",
@@ -26,7 +26,7 @@ social = [
 projects = [
   "<br>",
   "⚠ PROJECT SECTION IS CURRENTLY UNDER DEVELOPMENT ⚠",
-  "All projects are visible on my <a href='https://github.com/arin-prashar/' target='_blank'>GitHub</a>",
+  "All projects are visible on my <a href='https://github.com/dkgamer02ai/' target='_blank'>GitHub</a>",
   "<br>",
   "Type the name of the language to views its projects:",
   '<span class="command" style="cursor:pointer;" id="comnd"> => Python</span>',
@@ -51,9 +51,9 @@ python = [
   "<br>",
   "Python projects :<br>",
   "<br>",
-  '<a href="https://github.com/arin-prashar/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
-  '<a href="https://github.com/arin-prashar/Secure-File-Transfer-System" target="_blank">    => Secure File Sharing System' + "</a>",
-  '<a href="https://github.com/arin-prashar/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
+  '<a href="https://github.com/dkgamer02ai/Encrypter-Decrypter" target="_blank">    => Encryption Tool' + "</a>",
+  '<a href="https://github.com/dkgamer02ai/Secure-File-Transfer-System" target="_blank">    => Secure File Sharing System' + "</a>",
+  '<a href="https://github.com/dkgamer02ai/Python-YouTube-MP3-Downloader" target="_blank">    => Youtube MP3 Downloader' + "</a>",
   "<br>",
 ];
 
